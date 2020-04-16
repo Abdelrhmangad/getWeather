@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFD23F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+main h1{
+    width: 100%;
+    background-color: #5DA9E9;
+    text-align: center;
+    position: absolute;
+    top:25%;
+    font-size: 2.5rem;
+    padding: 30px 0px;
+}
+
+main .controller{
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #663399;
+}
+
+main .controller input, main .controller button{
+    font-size: 1.2rem;
+    margin: 10px;
+    padding: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .2s all ease-in-out;
+}
+main .controller input{
+    width: 370px;
+}
+main .controller button:hover{
+    cursor: pointer;
+    background-color: #5DA9E9;
+    color: white;
+}
+
+main #result{
+    z-index: 99999;
+    padding: 20px;
+    font-size: 1.2rem;
+    width: 300px;
+    text-align: center;
+    background-color: #EE4266;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    display: none;
+}
+
+/* 
+====colors:
+    #663399 --- REBECCA PURPLE
+    #4169E1 --- ROYAL BLUE
+    #EE4266 --- PARADISE PINK
+    #FFD23F --- SUNGLOW
+    #5DA9E9 --- BLUE JEANS
+*/
+
+
+/* Start Displaying data section */
+.data{
+    width: 100vw;
+    height: 100vh;
+    background-color:skyblue;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px;
+
+    display: none;
+}
+
+.data h2{
+    font-size: 2.4rem;
+    margin: 0px 0px 80px;
+}
+
+.data .display-data{
+    padding: 0px 100px;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bolder;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.tooltip {
+    position: relative;
+    display: block;
+}
+  
+  .tooltip .max-temp,
+  .tooltip .min-temp,
+  .wind .tooltiptext{
+    visibility: hidden;
+    min-width: 120px;
+    background-color: rgba(0, 0, 0, 0.548);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: -120px;
+}
+.tooltip .min-temp {
+    top: -3px;
+}
+.tooltip .max-temp{
+    top: 30px;
+}
+.wind .tooltiptext .wind-degree{
+    top:10px
+}
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* End Displaying data section */
+
+.data .display-data .main-description,
+.data .display-data .temp,
+.data .display-data .humidity,
+.data .display-data .wind{
+    margin: 20px 0px;
+    border-bottom: 2px dotted #663399;
+    padding-bottom: 10px;
+}
+
+.data .display-data .main-description #main-status,
+.data .display-data .temp #main-temp,
+.data .display-data .temp .max-temp #max-data,
+.data .display-data .temp .min-temp #min-data,
+.data .display-data .humidity #humidity-data,
+.data .display-data .wind #wind-power,
+.data .display-data .wind #wind-degree{
+    color: #EE4266;
+}
+
+.data .display-data .main-description #main-status,
+.data .display-data .temp #main-temp,
+.data .display-data .humidity #humidity-data,
+.data .display-data .wind #wind-power{
+    float: right;
+}

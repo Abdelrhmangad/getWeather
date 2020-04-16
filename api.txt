@@ -1,0 +1,7 @@
+api endpoint = api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}&units=metric
+
+api Example = https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&appid=e3b537cd0b9a76377ad4a0897a0fc71d;
+
+apikey = e3b537cd0b9a76377ad4a0897a0fc71d
+
+api.openweathermap.org/data/2.5/weather?q=cairo&appid=e3b537cd0b9a76377ad4a0897a0fc71d&units=metric

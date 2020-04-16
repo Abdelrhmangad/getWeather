@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Api</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <main id="control">
+        <h1>Write Your City Name To Get The Weather ☂</h1>
+        <div class="controller">
+            <input id="city-name" type="text" placeholder="Your City is..??">
+            <button id="btn" onclick="gettingWeather()">Get The Weather</button>
+        </div>
+        <p id="result">You Must Provide A city..!!</p>
+    </main>
+
+
+    <section class="data" id="dataDiv">
+        <h2>The weather</h2>
+        <div class="display-data">
+
+            <div class="main-description">
+                Main Status: <span id="main-status">clear sky</span>
+            </div>
+            <div class="tooltip temp">
+
+                Temperature🌡: <span id="main-temp">23</span>
+
+
+                <span class="tooltiptext max-temp">
+                    max temp: <span id="max-data">12</span>
+                </span>
+                <span class="tooltiptext min-temp">
+                    min temp: <span id="min-data">15</span> 
+                </span>
+            </div>
+
+            <div class="humidity">
+                Humidity: <span id="humidity-data"> 23</span>
+            </div>
+
+            <div class="tooltip wind">
+
+                Wind Speed: <span id="wind-power">32</span>
+
+                <span class="tooltiptext wind-degree">
+                    wind degree: <span id="wind-degree">15</span> 
+                </span>
+                
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
