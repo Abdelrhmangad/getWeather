@@ -2,13 +2,12 @@
 
 // declaring global variables
 let API = "e3b537cd0b9a76377ad4a0897a0fc71d";
-let cityName = "london";
 let input = document.getElementById("city-name");
 let btn = document.getElementById("btn");
 let resultDiv = document.getElementById("result");
 
 
-// start displaying data 
+// Elements where data will be displayed
 let dataMainDiv = document.getElementById("dataDiv");
 let mainStatuDiv = document.getElementById("main-status");
 let mainTempDiv = document.getElementById("main-temp");
@@ -19,13 +18,11 @@ let windPower = document.getElementById("wind-power");
 let windDegree = document.getElementById("wind-degree");
 
 
-// Function rersoinsalbe for fetching data
+// main functin to get data from the api for fetching data
 function gettingWeather(){
-
-    let usesrCity = input.value;
-    console.log(usesrCity);
-    
+    let usesrCity = input.value;    
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${usesrCity}&appid=e3b537cd0b9a76377ad4a0897a0fc71d&units=metric`;
+    // error Message (Validation) in case user didint write a city name 
     if(usesrCity == ""){
         resultDiv.style.display = "block";
         console.log("You Must Provide A city..!")
@@ -33,6 +30,7 @@ function gettingWeather(){
         resultDiv.style.display = "none";
         fetch(api)
             .then((response)=>{
+                // turning pormise into json format
                 return response.json();
             })
             .then((data)=>{
@@ -50,13 +48,13 @@ function gettingWeather(){
     }
 };
 
-
+// Show the result on clicking Enter
 input.addEventListener("keydown",function(e){
     if(e.keyCode == 13){
         gettingWeather(); 
     }
 })
-
+// Adding sscrolling after writing city name
 function scroll()
 {
     if(dataMainDiv.style.display = "block"){
